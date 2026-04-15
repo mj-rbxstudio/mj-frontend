@@ -5,8 +5,8 @@ export default function Home() {
   const [file, setFile] = useState<File | null>(null);
   const [format, setFormat] = useState("ogg");
   const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<any>(null);
-  const [error, setError] = useState<string | null>(null);
+  const [result, setResult] = useState(null);
+  const [error, setError] = useState(null);
 
   const handleUpload = async () => {
     if (!file) return alert("Pilih file dulu");
@@ -29,7 +29,7 @@ export default function Home() {
       if (!res.ok) throw new Error(data.error || "Server error");
 
       setResult(data);
-    } catch (err: any) {
+    } catch (err) {
       setError(err.message);
     }
 
