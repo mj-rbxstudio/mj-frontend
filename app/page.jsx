@@ -1,5 +1,16 @@
 "use client";
 import { useState } from "react";
+import { signInWithPopup } from "firebase/auth";
+import { auth, provider } from "./firebase";
+
+const login = async () => {
+  try {
+    const result = await signInWithPopup(auth, provider);
+    alert("Login berhasil: " + result.user.email);
+  } catch (err) {
+    alert("Login gagal");
+  }
+};
 
 export default function Home() {
   const [file, setFile] = useState(null);
@@ -44,7 +55,9 @@ export default function Home() {
   return (
     <div style={{ padding: 20 }}>
       <h1>MJ Roblox Studio</h1>
-
+      <button onClick={login}>
+    Login dengan Google
+</button>
       <input
         type="file"
         onChange={(e) => setFile(e.target.files[0])}
