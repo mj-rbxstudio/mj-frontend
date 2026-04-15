@@ -19,7 +19,7 @@ export default function Home() {
       formData.append("file", file);
       formData.append("format", format);
 
-      const res = await fetch("http://localhost:5000/convert", {
+      const res = await fetch("https://backend-kamu.railway.app/convert", {
         method: "POST",
         body: formData,
       });
