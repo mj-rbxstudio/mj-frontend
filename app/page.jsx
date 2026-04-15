@@ -22,7 +22,7 @@ export default function Home() {
       formData.append("file", file);
       formData.append("format", format);
 
-      const res = await fetch("http://localhost:5000/convert", {
+      const res = await fetch("https://mj-backend-production-65b0.up.railway.app/convert", {
         method: "POST",
         body: formData,
       });
