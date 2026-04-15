@@ -2,9 +2,9 @@ import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "ISI_DARI_FIREBASE",
-  authDomain: "ISI_DARI_FIREBASE",
-  projectId: "ISI_DARI_FIREBASE",
+  apiKey: "AIzaSyA11HcV76G1PEBWgqep7W9aEgcorCSG3tI",
+  authDomain: "mj-roblox-studio-1a630.firebaseapp.com",
+  projectId: "mj-roblox-studio-1a630",
 };
 
 const app = initializeApp(firebaseConfig);
